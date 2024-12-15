@@ -1,0 +1,159 @@
+<!--
+Copyright 2024 StoneTank
+Licensed under the MIT License
+https://opensource.org/license/mit
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.25, maximum-scale=2, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="numberplace.css">
+  <script src="../numberplace.js"></script>
+  <script src="numberplace.ui.js"></script>
+  <title>ナンプレ</title>
+</head>
+<body>
+
+  <div id="start-screen" class="screen">
+    <h2 class="align-center">難易度選択</h2>
+    <div class="align-center">
+      <input type="button" class="start-button" value="超簡単" data-difficulty="1">
+    </div>
+    <div class="align-center">
+      <input type="button" class="start-button" value="簡　単" data-difficulty="2">
+    </div>
+    <div class="align-center">
+      <input type="button" class="start-button" value="ふつう" data-difficulty="3">
+    </div>
+  </div>
+  
+  <div id="game-screen" class="screen" tabindex="1">
+    <div id="board">
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell0"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell1"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell2"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell3"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell4"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell5"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell6"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell7"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell8"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell9"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell10"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell11"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell12"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell13"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell14"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell15"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell16"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell17"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell18"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell19"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell20"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell21"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell22"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell23"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell24"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell25"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell26"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell27"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell28"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell29"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell30"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell31"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell32"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell33"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell34"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell35"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell36"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell37"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell38"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell39"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell40"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell41"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell42"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell43"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell44"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell45"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell46"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell47"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell48"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell49"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell50"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell51"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell52"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell53"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell54"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell55"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell56"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell57"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell58"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell59"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell60"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell61"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell62"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell63"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell64"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell65"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell66"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell67"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell68"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell69"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell70"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell71"></div>
+      </div>
+      <div class="flex row">
+        <div class="cell flex align-items-center justify-content-center" id="cell72"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell73"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell74"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell75"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell76"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell77"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell78"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell79"></div>
+        <div class="cell flex align-items-center justify-content-center" id="cell80"></div>
+      </div>
+    </div>
+    <div>
+      <div class="flex row align-items-center justify-content-center">
+        <input type="button" class="number-button" value="1">
+        <input type="button" class="number-button" value="2">
+        <input type="button" class="number-button" value="3">
+        <input type="button" class="number-button" value="4">
+        <input type="button" class="number-button" value="5">
+        <input type="button" class="number-button" value="6">
+        <input type="button" class="number-button" value="7">
+        <input type="button" class="number-button" value="8">
+        <input type="button" class="number-button" value="9">
+      </div>
+      <div class="flex row align-items-center justify-content-center">
+        <label id="note-checkbox-label"><input type="checkbox" id="note-checkbox">メモ</label>
+      </div>
+      <div class="flex row align-items-center justify-content-center">
+        <input type="button" id="undo-button" value="１つ戻す">
+        <input type="button" id="reset-button" value="全部戻す">
+        <input type="button" id="delete-button" value="マス削除">
+        <input type="button" id="new-button" value="新規">
+      </div>
+    </div>
+    <div id="status" class="flex row align-items-center justify-content-center">&nbsp;</div>
+  </div>
+</body>
+</html>
